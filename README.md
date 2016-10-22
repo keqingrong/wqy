@@ -5,7 +5,7 @@
 
 这是[文泉驿](https://sourceforge.net/projects/wqy/)项目部分字体文件的备份。
 
-原项目自2011年起，疑似不再有人维护。2014年7月16日，Adobe公司与Google公司发布了一款新的开源字体，思源黑体（Source Han Sans/Noto Sans CJK），从此开源社区有了更好的中文字体选择。
+原项目自2011年起，疑似不再有人维护。2014年7月16日，Adobe公司与Google公司发布了一款新的开源字体**思源黑体(Source Han Sans/Noto Sans CJK)**，从此开源社区有了更好的中文字体选择。
 
 ## 字体
 文泉驿正黑(包含文泉驿正黑、文泉驿等宽正黑、文泉驿点阵正黑)
