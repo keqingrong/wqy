@@ -1,0 +1,279 @@
+========================================================== 
+
+                 Wen Quan Yi Zen Hei
+
+                     ChangeLog
+
+----------------------------------------------------------
+
+WenQuanYi Zen Hei ChangeLog:
+
+2010/03/02  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.45):
+          1. release Fighting-state RC1
+
+2010/02/18  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.44):
+          1. update documents to prepare the release of v1.0 RC1
+
+2009/12/02  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.44):
+          1. fixing a scaling factor bug for radicals by a new build
+
+2009/10/29  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.43):
+          1. new global build, added noradical flag support
+          2. fix radicals in http://wenq.org/dev/index.cgi?ZenHei_Push/0005
+
+2009/10/03  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.42):
+          1. added wqy-zenhei-cfg script to set user preference
+          2. updated wqypkg and debsrc to add menu items and translations 
+          3, renamed 66-wqy-zenhei-sharp.conf to 43-wqy-zenhei-sharp.conf
+          4. changed zenheiset for the new config files
+
+2009/09/19  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.42):
+          1. new build with improved parameters
+          2. updated algorithm to compute glyph top margin
+          3. fine-tuned P,XG,D,HZW and *G strokes
+          4. all CJK Han glyphs moved upward for 10 units (EM=1024)
+          5. fixed a bug for all characters involving U4EB6 as a component
+
+2009/05/22  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.41):
+          1. fixed a bug to compute radical dimensions.
+
+2009/05/17  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.41):
+          1. changed algorithms to compute stroke thickness for radicals
+          2. completely removed all Korean Han glyphs from un-dotum source
+
+2009/05/16  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.40):
+          1. improved stroke designs for G, T, K, DT, P/WP, S-HZ, S-HZG etc
+          2. improved tens of radical designs
+          3. a great number of characters were updated by three-leg-cat
+          4. updated algorithms for base-line alignment
+
+2009/04/21  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.39-cvs20090421):
+          1. added "WenQuanYi Zen Hei Sharp" to the TTC as the bitmap-embedding
+             face; Zen Hei now has only vector glyphs
+
+2009/03/13  Qianqian Fang (fangqq#gmail_com) (Fighting-State 0.9.39-cvs20090313):
+          1. included all CJK Ext. A characters (U3400-U4DB5)
+          2. embedded GB18030 branch of WenQuanYi Bitmap Song including
+             all CJK basic and CJK Ext. A Han glyphs (at 5 point sizes)
+          3. released a monthly build
+
+2009/03/04  Qianqian Fang (fangqq#gmail_com) (Pangu 0.8.38-1):
+          1. completed migrating the back-end scripts to sqlite
+          2. imported 13px Bitmap Song. wanghong had made significant
+             progress optimizing these glyphs
+          3. re-done all the Korean Hanja, originated from Un-dotum
+          4. thousands of Han glyphs were refined toward higher 
+             standards by the continuous efforts from Three-leg-cat
+          5. further refinement of Hanzi radical glyphs, added about
+             100 new radical variants in addition to the existing 192.
+          6. suggested by mozbug, all the G-strokes (HG,SG,HZG,SZZG,
+             HZZZG) now has a slightly different style
+          7. optimized fontforge scripts to minimize black-blobs
+          8. added a script to set the default style (AA or bitmap) 
+
+2008/10/27  Qianqian Fang (fangqq#gmail_com) (Pangu 0.8.34.cvs20081027):
+          1. more than 1000 characters were manually improved 
+             since the last release (0.6) (by three-leg-cat)
+          2. the ttc file size is only 11M with two font faces
+          3. all missing (~760) CJK Extension A Hanzi now complete
+             the phase of stroke decomposition and will be added
+             to the font in the next major release
+
+2008/09/06  Qianqian Fang (fangqq#gmail_com) (Pangu 0.8.34):
+          1. added monospaced face, Zen Hei Mono, into the font
+          2. font format was updated from ttf to ttc to reduce
+             file sizes
+          3. streamlining the ttc font creating in the nightly-
+             build script.
+
+2008/07/23  Qianqian Fang (fangqq#gmail_com) (Pangu 0.8.32):
+          1. extracted the radical information from 17,000 Hanzis
+             and modify the glyph generation script so that we could 
+             use unified radical glyphs for all characters sharing
+             the same radicals; this greatly improved the look and
+             feel of the font
+          2. performed more aggressive outline simplification to 
+             reduce the font size
+          3. hand-tunning the radical positions for 500 Hanzi
+          4. all CJK Basic Hanzi (i.e. GBK, 20932 char.) were reviewed
+             and make sure that their shape match the Chinese goverment 
+             national standards (project BlueSky)
+
+2008/06/20  Qianqian Fang (fangqq#gmail_com) (Prayer 0.6.26):
+          1. corrected more than 10 bugs in the glyph generation
+             code; performed full compilation 3 times (24-26)
+          2. improved the following stroke contours: P,SP,WP,SG,
+             HZG,SZZG,HZZZG,SWG,PN,TPN,WG,PD,D,N,PT
+          3. automatically combine HG,SG if they follow
+          4. more sophisticated algorithm for edge aligment and 
+             margin calculation
+          5. stroke thickness was slightly fine-tuned
+
+2008/06/18  Qianqian Fang (fangqq#gmail_com) (Prayer 0.6.23):
+          1. added vertical metrics
+          2. fix wrong bitmap glyph advance under Windows 
+             (ZenHei_BUG#1209092295)
+          3. fix incorrect reference mapping order for CJK Radical Supplement
+             for blocks U2E9A-U2EB2 and U2EC0-U2EC1
+          4. used the traditional forms for U2EEF and U2ECE, added U2EE1
+          5. added new Unicode 5.1 CJK glyphs in BMP, including
+             U312D         A new Bopomofo Hanzi
+             U31D0-U31E3   Hanzi strokes
+             U9FBC-U9FC3   New CJK Basic Hanzi
+          6. added hinting for Latin basic glyphs
+          7. added GASP table
+          8. thousands (precisely, 6749) of Hanzi glyphs were optimized and 
+             updated based on the structures from National Standard GB18030
+             (55% of CJK basic Hanzi has been reviewed so far)
+          9. add Chinese font names in the fontconfig pattern match 
+             in 44-wqy-zenhei.conf
+         10. add 66-wqy-zenhei-sharp.conf for users who prefer bitmaps
+         11. the TTF file size is 2.6M smaller than 0.5.23 ! even the 
+             compressed package is 1M smaller.
+
+          The milestone specifications of this release can be found at
+            http://wenq.org/dev/index.cgi?Milestone/ZenHei/0.6.23
+
+2008/03/23  Qianqian Fang (fangqq#gmail_com) (Kwafoo 0.5.23):
+          1. fix critical bug (#3113): "/" has no 9pt bitmap glyph
+          2. fix bug (#3136): blank bitmaps for uni2223,uniFE33 and ref12845
+          3. fix critical bug (#3182): large number of erroneous bitmap 
+              in bitmap song due to incorrectly calculated byte length
+          4. fix critical bug (#3183): incorrect mapping order for 
+              CJK Radical (U2E80-U2EFF)
+          5. complete bitmap glyphs (9pt-12pt) for U9FA6-U9FBB
+          6. fix reference creation script, completed CJK 
+              Compatibility Ideographs
+          7. added reference for UFE17,UFE18,UFE32,UFE47,UFE48,UFE45,UFE46,
+              complete coverage to CJK Compatibility Forms block
+          8. optimized 466 CJK Hanzi glyphs since 02/11/2008
+          9. added U2031,U2034, corrected curve orientations in U3005
+          10.added Chinese Counting Rob Units (U1D360~U1D371)
+
+2007/02/11  Qianqian Fang (fangqq#gmail_com) (zixiao 0.4.23-0):
+          1. created more reference glyphs, added 863 new glyphs
+             (Bopomofo)
+                U312A,U312B,U312C
+             (CJK Compatibility Glyphs)
+                UF900-UFAD9
+             (CJK Compatibility Supplement)
+                U2F800-U2FA1D
+             (Kanbun glyphs)
+                U3192-U319F
+             (CJK radicals)
+                U2E80-U2EF3
+             (Extended Bopomofo)
+                U31B4-U31B7
+             KangXi radicals (U2F00-U2FD5) were replaced by references.
+
+2007/02/08  Qianqian Fang (fangqq#gmail_com) (zixiao 0.4.23.cvs20070208):
+          1. documentation updates
+          2. set hintnone as default in 44-wqy-zenhei.conf
+
+2007/02/04  Qianqian Fang (fangqq#gmail_com) (zixiao 0.4.23.cvs20070204):
+          1. create combined glyphs using references, added 363 new glyphs
+             (enclosed CJK glyphs)
+                U3220-U3243, U3280-U32B0, U32D0-U32FE
+             (Chinese dates)
+                U32C0-U32CB
+             (Chinese time)
+                U3358-U3370
+             (Japanese year)
+                U337B-U337E
+             (Chinese months)
+                U33E0-U33FE
+             (Yin yang symbols)
+                U4DC0-U4DFF
+             (Basic Yin Yang symbols)
+                U2630-U2637
+             (Tai Xuanjing Symbols)
+                U1D300-U1D356
+          2. added U0251 U0261 U02CA U02CB U2010 U2016 U2035 
+                   U2105 U2215 U221F U2223 U2236 U2237 U2248
+                   U224C U2266 U2267 U226E U226F U2295 U22BF U301E
+                   till now, complete all CP936 (GBK) code-points 
+          3. added U309D and U309E, completed ja locale
+
+2007/01/13  Qianqian Fang (fangqq#gmail_com) (zixiao 0.4.23):
+          1. balance two feet of square structures
+          2. narrow ends for flat P/WP
+          3. SG/HZG/etc extended downward slightly
+          4. balance two feet for symmetric P/N or HP/N or SP/N structures
+          5. optimize HZWG when the second segment is vertical
+          6. automatically calculate H/S thickness based on glyph info
+          7. fix bug for HanZiTou, such as in U9A9E
+          8. compress BaoGaiTou
+          9. improved margin algorithm
+
+2007/12/27  Qianqian Fang (fangqq#gmail_com) (zixiao 0.2.20):
+          1. allow H-strokes and S-strokes to have different stroke thicknesses
+          2. major improvement in glyph quality
+          3. fix buggy glyph U9531
+
+2007/12/26  Qianqian Fang (fangqq#gmail_com) (zixiao 0.2.19):
+          1. significant improvement in glyph look-n-feel
+          2. automatic margin calculation and edge alignment
+          3. enlarged "CJK period" U3002
+          4. added U9FA6-U9FBB glyphs
+          5. adjusted glyphs extended outside BBX
+          6. scaled Hangul glyphs to 1024
+          7. optimized SG,HZG,SZZG,HZZZG,D,SW,SWG,P and WP
+          8. D allows curved shapes 
+          9. assigned -1 for all Hangul ligatures, rather than using PUA
+         10. thousands of glyphs were optimized by contributors
+
+2007/09/15  Qianqian Fang (fangqq#gmail_com) (zixiao 0.2.15):
+          1. removed cm-unicode and M+fonts, use un-dotum for non-CJK glyphs instead
+          2. optimize fontforge scripts and reduce broken splines
+          3. complete all code-points needed for zh_cn/zh_sg/zh_tw/zh_hk/zh_mo
+          4. first public release
+
+2007/08/12  Qianqian Fang (fangqq#gmail_com) (zixiao 0.2.10):
+          1. use X11 fonts, cm-unicode and M+fonts, for Latin/Japanese support
+          2. optimize "square" structures
+          3. improve font alignment by re-scaling in fontforge
+          4. incorporate 300+ updated vector glyphs
+          5. hand-draw Chinese table-making characters
+          6. use the latest nightly build (west yard) for the embedded bitmap glyphs
+          7. include BlueValues and a few other settings in Font Information
+          8. further thicken the font strokes for 20 percent
+          9. improve PN and TPN
+
+2007/07/14  Qianqian Fang (fangqq#gmail_com) (alpha-pre-zixiao3 0.1.7):
+          1. complete zh_hk/zh_mo coverage by hand-drawing 214 new characters
+          2. embed wenquanyi bitmap song bitmap glyphs for 9-12pt
+          3. add 4 new non-cjk glyphs 0x0178->co,fr, 0x02BB->sm,to, 0x0175->ny, 0x0174->ny 
+             and complete the coverage for locales fr,sm,ny and to
+          4. delete hinting information, which cause distortion of the fonts
+          5. set the stroke width to 60
+          6. change encoding from unicode BMP to iso10646-1 to accommodate a
+             single Hongkong Hanzi in CJK Extension B.
+
+2007/07/07  Qianqian Fang (fangqq#gmail_com) (alpha-pre-zixiao2 0.1.6):
+          1. identify the missing characters for various zh_* locales
+          2. complete zh_cn/zh_sg coverage by adding glyph ˉ
+          3. complete zh_tw coverage by hand-drawing the following characters
+              甮兀钀瓡蔠媊詫
+              簃誧鐎穄涺緀鬞
+              搕挓眃鰭瞴黵翃
+              璯昍亙萰篜瑿渳
+              縈銕緮猏郔諳齕
+              髳嶞嗀餾嗎瀙鄈
+           4. add hinting/auto-instr information with fontforge
+           5. re-do about 50 ugly characters picked by testers
+
+2007/06/19  Qianqian Fang (fangqq#gmail_com) (alpha-pre-zixiao1 0.1.5):
+          1. first release for internal review
+          2. re-do ~600 GBK characters
+          3. including 19916 CJK Hanzi, merge with UnDotum
+          4. stroke width set to 50, optimize SG, SWG,HZG,HZWG etc
+
+2007/06/03  Qianqian Fang (fangqq#gmail_com) (pre alpha 0.1.2):
+          1. re-do 220 GB2312 glyphs
+          2. code polishing and stroke style adjustment
+
+2007/05/26  Qianqian Fang (fangqq#gmail_com) (pre alpha 0.1.1):
+          1. developer's first working prototype
+          2. remove 300 low-quality GB2312 glyphs and 600 GBK glyphs
+          3. code optimization and automation
+          4. fontforge script development

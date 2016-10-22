@@ -1,0 +1,160 @@
+========================================================== 
+
+               Wen Quan Yi Zen Hei CJK Font
+
+                  Installation Guide
+
+----------------------------------------------------------
+
+WenQuanYi Zen Hei font is a Chinese (or CJK) outline font 
+with Hei-Ti style (a sans-serif style) Hanzi glyphs. This font
+is developed for general purpose use of Chinese for formating,
+printing and on-screen display. This font is also targeted at 
+platform independence and the utility for document exchange
+between various operating systems.
+
+The installation process for this font on various systems will
+be outlined below in this document.
+
+
+Special Note: By default, we disabled the embedded bitmaps,
+so that the characters will be displayed as Anti-aliased glyphs.
+For those who want to use bitmap font rendering (for 9pt-12pt),
+Please find the additional fontconfig file 66-wqy-zenhei-*.conf
+in the installation package, and copy them to /etc/fonts/conf.avail/ 
+You need to use "sudo" or change to root user to do the copy.
+
+You can also find a command "zenheiset" in the package, install
+it to /usr/bin/ with root permission, and then you can
+type command
+
+  sudo zenheiset aa
+
+to display only the smooth vector glyphs, or 
+
+  sudo zenheiset bitmap
+
+to use the embedded Hanzi bitmaps, except the experimental 13px, or 
+
+  sudo zenheiset bitmapfull
+
+to use all available bitmaps.
+
+If you do not have root/sudo permission, you can simply
+merge the 66-* files and copy it to ~/.fonts.conf to 
+enable the settings.
+
+----------------------------------------------------------
+
+Table of Content:
+
+I.   Installation for GNU/Linux, Unix or BSD-like systems
+II.  Installation for Windows
+III. Installation for Mac OS
+
+========================================================== 
+I.   Installation for GNU/Linux, Unix or BSD-like systems
+
+The installation of this font on Linux/BSD type system is quite
+straightforward if you are using the latest fontconfig/freetype2
+libraries. Three types of packages were provided for this font:
+Debian deb package, Redhat RPM package and generic tgz compression
+format.
+
+----------------------------------------------------------
+
+1. Install Debian deb package
+
+One-command installation is available for this font on Debian-based
+systems. You can download the wqy-zenhei*.deb package and cd to the 
+directory where the downloaded file locates, and type
+
+    dpkg -i wqy-zenhei*.deb
+
+where * is the actual version number. This will copy the font to
+appropriate folders and set the configurations automatically.
+
+to verify, after the installation, type 
+    ls /usr/share/fonts/wenquanyi/wqy-zenhei/
+and see if this directory exists. You can also type
+    fc-list | grep WenQuanYi
+and see if you can see Zen Hei in the output
+
+----------------------------------------------------------
+
+2. Install Redhat RPM package
+
+This is similar to the above case, you can simply type
+
+    rpm -ivh wqy-zenhei*.rpm
+
+to install and configure this font to your system
+----------------------------------------------------------
+
+3. Manual Installation with tgz package
+
+If you are running BSD-type or Unix systems, you can install this
+font manually.
+
+
+3.1 Installation for all users
+
+First, extract the font files with
+
+   tar zxvf wqy-zenhei*.tar.gz
+
+Then, change to root user, move the extracted folder, "wqy-zenhei" 
+under /usr/share/fonts/wenquanyi/ (If this dir does not exist, use 
+mkdir -p /usr/share/fonts/wenquanyi/ to create it first.)
+
+Then edit /etc/X11/xorg.conf or /etc/X11/XF86Config-4
+and find the section with FontPath. Append 
+
+   FontPath /usr/share/fonts/wenquanyi/wqy-zenhei
+
+under any of the FontPath line, save this file.
+
+Then, if your system has /etc/fonts/fonts.conf, edit
+it and append 
+
+  <dir>/usr/share/fonts/wenquanyi/wqy-zenhei/</dir>
+
+before </fontconfig>
+
+If your system are using fontconfig 2.4.x, move 44-wqy-zenhei.conf
+in the extracted files to ~/.fonts.conf
+
+Restart X server and you should be able to use this font.
+
+2. Installation for single user
+
+If you do not have root access, you can also install this font
+by copying wqy-zenhei.ttc to ~/.fonts/  (If this folder
+does not exist, create it first) and move 44-wqy-zenhei.conf to
+~/.fonts.conf, then you can type fc-cache ~/.fonts/ to activate 
+this font.
+
+Alternatively, if you are running KDE/GNOME, you can use
+the font installer tool from the preference dialog and install
+this font.
+
+
+========================================================== 
+II.  Installation for Windows
+
+To install this font on Windows is similar to any other true-type 
+fonts: extract the wqy-zenhei.ttc file from the tar.gz package
+and copy/paste it to c:\windows\fonts\ folder or c:\winnt\fonts\ folder.
+
+If you have already installed an earlier version of this font, you
+need to uninstall it before installing a new version.
+
+We also provide a windows installer to automate the 
+installation process. It is a self-executable file and simply
+click and run.
+
+========================================================== 
+III.  Installation for Mac OS
+
+Similar to Windows, download the tgz package and extract the ttc file,
+double click on the ttc file on Finder, and click "Install".
